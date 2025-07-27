@@ -2,28 +2,39 @@ import { test, expect } from '@playwright/test'
 import { LoginPage } from '../pages/login'
 import { DepositPage } from '../pages/deposit'
 import { TransactionsPage } from '../pages/transactions'
+import { describe } from 'node:test'
 
-test('DepositTest', async ({ page }) => {
+test.describe('Smoke Tests', () => {
 
-  const Login = new LoginPage(page)
-  const Deposit = new DepositPage(page)
-  const Transactions = new TransactionsPage(page)
+    test('DepositTest', async ({ page }) => {
 
-  await Login.gotoLoginPage();
-  await Login.login('Ron Weasly');
+  const loginPage = new LoginPage(page)
+  const depositPage = new DepositPage(page)
+  const transactionsPage = new TransactionsPage(page)
+
+  await test.step('Login', async () => {
+    await loginPage.gotoLoginPage();
+    await loginPage.login('Ron Weasly');
+  });
   
-  await Deposit.testDeposit('100');
-  await Deposit.verifyBalance('100');
-  await Deposit.testDeposit('10');
-  await Deposit.verifyBalance('110');
-  await Deposit.testDeposit('1');
-  await Deposit.verifyBalance('111');
+  await test.step('Make deposits', async () => {
+    await depositPage.testDeposit('100');
+    await depositPage.verifyBalance('100');
+    await depositPage.testDeposit('10');
+    await depositPage.verifyBalance('110');
+    await depositPage.testDeposit('1');
+    await depositPage.verifyBalance('111');
+  });
 
-  await Transactions.clickTransactions();
-  await Transactions.verifyTransactionx('1','100')
-  await Transactions.verifyTransactionx('2','10')
-  await Transactions.verifyTransactionx('3','1')
-  await Transactions.clickReset();
-  await Transactions.clickBack();
+  await test.step('Verify transactions', async () => {
+    await transactionsPage.clickTransactions();
+    await transactionsPage.verifyTransactionx('1','100')
+    await transactionsPage.verifyTransactionx('2','10')
+    await transactionsPage.verifyTransactionx('3','1')
+    await transactionsPage.clickReset();
+    await transactionsPage.clickBack();
+  });
+
+    });
 
 });
