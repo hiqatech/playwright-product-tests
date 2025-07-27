@@ -9,10 +9,11 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "@playwright/test": "^1.54.0",
+    "@playwright/test": "^1.54.1",
     "@types/node": "^22.15.18"
   },
   "dependencies": {
+    "dotenv": "^17.2.1",
     "expect.js": "^0.3.1"
   }
 }

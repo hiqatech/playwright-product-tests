@@ -11,7 +11,7 @@ exports.LoginPage = class LoginPage {
     }
 
     async gotoLoginPage(){
-        await this.page.goto('https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login');
+        await this.page.goto(process.env.URL);
         
     }
 
