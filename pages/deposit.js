@@ -36,7 +36,7 @@ export class DepositPage {
         await this.clickDeposit();
         await this.enterDeposit(deposit);
         await this.clickSubmit();
-        await new Promise(resolve => setTimeout(resolve, 1000)); 
+        await this.page.waitForTimeout(1000);
         await this.verifySucessful();
     }
 
