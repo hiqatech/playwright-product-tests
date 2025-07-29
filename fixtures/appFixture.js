@@ -1,5 +1,5 @@
 const { AndroidDevice, test: base, _android } = require('@playwright/test');
-const MobileAppPage = require('../mobile/appPage');
+const MobileAppPage = require('../pages/appPage');
 
 const retries = 3;
 const timeoutMs = 30000;
@@ -37,8 +37,10 @@ const fixtures = base.extend({
             const res = await _android.launchServer({ deviceSerialNumber: 'emulator-5554', omitDriverInstall: false });
             device = await _android.connect(res.wsEndpoint());
             await device.shell('pm clear com.android.chrome');
+            await device.shell('am force-stop com.android.chrome');
             await device.shell('am set-debug-app --persistent com.android.chrome');
-            const context = await device.launchBrowser({ baseURL });
+            const context = await device.launchBrowser();
+            //await device.installApk(__dirname+'\\General-Store.apk');
             const page = await context.newPage();
             await use(page);
         }, retries, timeoutMs);
