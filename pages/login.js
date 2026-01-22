@@ -1,6 +1,6 @@
 import { expect } from '@playwright/test';
 
-exports.LoginPage = class LoginPage {
+export class LoginPage {
 
     constructor(page) {
 
@@ -10,7 +10,7 @@ exports.LoginPage = class LoginPage {
         this.login_button = page.locator('xpath=//button[text()="Login"]');
     }
 
-    async gotoLoginPage(){
+    async gotoLogin(){
         await this.page.goto(process.env.URL);
         
     }

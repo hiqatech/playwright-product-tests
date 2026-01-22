@@ -1,7 +1,7 @@
 import { expect } from '@playwright/test';
 import { fixtures as test } from '../fixtures/appFixture';
 
-/*
+
 test.beforeEach(async ({ page }) => {
     await page.goto(process.env.MOBILE_APP_URL.toString());
 })
@@ -18,4 +18,4 @@ test('Validate testers talk playlist link', async ({ mobileAppPage, page }) => {
         await page.screenshot({ path: './mobile_app_test_resultspage.png' });
     });
 })
-*/
+

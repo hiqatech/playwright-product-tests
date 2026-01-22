@@ -1,0 +1,116 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "deposit-functionality;verify-deposit-web",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Verify Deposit Web",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "User navigates to the Deposit Homepage",
+            "match": {
+              "location": "file:\\D:\\ZolStaff\\HiQATech\\playwright-product-tests\\tests\\steps\\depositPage.steps.js:10"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 3947200,
+              "error_message": "page.goto: url: expected string, got undefined\n    at LoginPage.gotoLogin (D:\\ZolStaff\\HiQATech\\playwright-product-tests\\pages\\login.js:14:25)\n    at World.<anonymous> (D:\\ZolStaff\\HiQATech\\playwright-product-tests\\tests\\steps\\depositPage.steps.js:12:19)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "User logs in with given username",
+            "match": {
+              "location": "file:\\D:\\ZolStaff\\HiQATech\\playwright-product-tests\\tests\\steps\\depositPage.steps.js:15"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "User clicks on Deposit Menu",
+            "match": {
+              "location": "file:\\D:\\ZolStaff\\HiQATech\\playwright-product-tests\\tests\\steps\\depositPage.steps.js:19"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "User makes a deposit",
+            "match": {
+              "location": "file:\\D:\\ZolStaff\\HiQATech\\playwright-product-tests\\tests\\steps\\depositPage.steps.js:29"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "The balance should be",
+            "match": {
+              "location": "file:\\D:\\ZolStaff\\HiQATech\\playwright-product-tests\\tests\\steps\\depositPage.steps.js:33"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "User clicks on Transactions Menu",
+            "match": {
+              "location": "file:\\D:\\ZolStaff\\HiQATech\\playwright-product-tests\\tests\\steps\\depositPage.steps.js:24"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "The transaction should be",
+            "match": {
+              "location": "file:\\D:\\ZolStaff\\HiQATech\\playwright-product-tests\\tests\\steps\\depositPage.steps.js:37"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "deposit-functionality",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Deposit Functionality",
+    "tags": [],
+    "uri": "tests\\features\\depositTests.feature"
+  }
+]

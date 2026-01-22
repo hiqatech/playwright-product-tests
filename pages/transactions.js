@@ -1,6 +1,6 @@
 import { expect } from '@playwright/test';
 
-exports.TransactionsPage = class TransactionsPage {
+export class TransactionsPage {
 
     constructor(page) {
 

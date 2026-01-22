@@ -1,7 +1,7 @@
-import { LoginPage } from '../pages/login'
-import { DepositPage } from '../pages/deposit'
-import { TransactionsPage } from '../pages/transactions'
-import { fixtures as test } from '../fixtures/webFixture'
+import { LoginPage } from '../pages/login';
+import { DepositPage } from '../pages/deposit';
+import { TransactionsPage } from '../pages/transactions';
+import { fixtures as test } from '../fixtures/webFixture';
 
 test.describe('Smoke Tests', () => {
 
@@ -12,7 +12,7 @@ test.describe('Smoke Tests', () => {
     const transactionsPage = new TransactionsPage(page)
 
     await test.step('Login', async () => {
-      await loginPage.gotoLoginPage();
+      await loginPage.gotoLogin();
       await loginPage.login('Ron Weasly');
     });
 
@@ -37,3 +37,6 @@ test.describe('Smoke Tests', () => {
   });
 
 });
+
+
+//npx playwright test deposit --headed --project Chrome

@@ -1,7 +1,7 @@
 const { Page } = require('playwright-core');
 import { expect } from '@playwright/test';
 
-class MobileAppPage {
+class AppPage {
     /**
      * 
      * @param {import ('@playwright/test').Page} page 
@@ -49,4 +49,4 @@ class MobileAppPage {
 
 }
 
-module.exports = MobileAppPage;
+module.exports = AppPage;
