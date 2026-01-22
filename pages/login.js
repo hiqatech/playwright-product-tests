@@ -1,5 +1,7 @@
 import { expect } from '@playwright/test';
 
+let url = 'https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login';
+
 export class LoginPage {
 
     constructor(page) {
@@ -11,7 +13,7 @@ export class LoginPage {
     }
 
     async gotoLogin(){
-        await this.page.goto(process.env.URL);
+        await this.page.goto(url);
         
     }
 

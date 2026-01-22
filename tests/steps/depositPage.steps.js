@@ -18,7 +18,7 @@ Given('User logs in with given username', async function () {
 
 When('User clicks on Deposit Menu', async function () {
     depositPage  = new DepositPage(pageFixture.page)
-    await detailsPage.clickDeposit();
+    await depositPage.clickDeposit();
 });
 
 When('User clicks on Transactions Menu', async function () {
